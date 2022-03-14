@@ -93,6 +93,22 @@ namespace Basic_Core_Program
 
             Console.WriteLine(nthharmonic(N));
         }
+
+        public void FactorPrime()
+        {
+            int a;
+            int b;
+            Console.WriteLine("Enter a Number");
+            a = int.Parse(Console.ReadLine());
+            for (b = 1; b <= a; b++)
+            {
+                if (a % b == 0)
+                {
+                    Console.WriteLine(b + " is a factor of " + a);
+                }
+
+            }
+        }
         public static void Main(string[] args)
         {
             Console.WriteLine("Enter a number for relative problem.\n");
@@ -100,6 +116,7 @@ namespace Basic_Core_Program
             Console.WriteLine("2 for Leap Year");
             Console.WriteLine("3 for Power of 2");
             Console.WriteLine("4 for Harmonic Number");
+            Console.WriteLine("5 for Prime Factor");
             int Problem = Convert.ToInt32(Console.ReadLine());
             BasicCoreProgram basicCoreProgram = new BasicCoreProgram();
 
@@ -116,6 +133,9 @@ namespace Basic_Core_Program
                     break;
                 case 4:
                     basicCoreProgram.harmonic();
+                    break;
+                case 5:
+                    basicCoreProgram.FactorPrime();
                     break;
                 default:
                     Console.WriteLine("You Enter Invalid Number ");
