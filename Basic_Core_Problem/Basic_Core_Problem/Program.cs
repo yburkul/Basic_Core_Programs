@@ -75,12 +75,31 @@ namespace Basic_Core_Program
             }
 
         }
+
+        public double nthharmonic(int N)
+        {
+            float harmonic = 1;
+            for (int i = 2; i <= N; i++)
+            {
+                harmonic += (float)1 / i;
+            }
+            return harmonic;
+
+        }
+        public void harmonic()
+        {
+            Console.WriteLine("Enter a N Value");
+            int N = int.Parse(Console.ReadLine());
+
+            Console.WriteLine(nthharmonic(N));
+        }
         public static void Main(string[] args)
         {
             Console.WriteLine("Enter a number for relative problem.\n");
             Console.WriteLine("1 For Flip Coin Percentage");
             Console.WriteLine("2 for Leap Year");
             Console.WriteLine("3 for Power of 2");
+            Console.WriteLine("4 for Harmonic Number");
             int Problem = Convert.ToInt32(Console.ReadLine());
             BasicCoreProgram basicCoreProgram = new BasicCoreProgram();
 
@@ -94,6 +113,9 @@ namespace Basic_Core_Program
                     break;
                 case 3:
                     basicCoreProgram.PowerOf();
+                    break;
+                case 4:
+                    basicCoreProgram.harmonic();
                     break;
                 default:
                     Console.WriteLine("You Enter Invalid Number ");
