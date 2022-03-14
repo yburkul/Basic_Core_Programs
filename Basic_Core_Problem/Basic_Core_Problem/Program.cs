@@ -109,6 +109,23 @@ namespace Basic_Core_Program
 
             }
         }
+
+        public void QuoRem()
+        {
+            int divident;
+            Console.WriteLine("Enter a Divident");
+            divident = int.Parse(Console.ReadLine());
+            int divisor;
+            Console.WriteLine("Enter a Divisor");
+            divisor = int.Parse(Console.ReadLine());
+
+            int quotient = divident / divisor;
+            int remainder = divident % divisor;
+
+            Console.WriteLine("Quotient: " + quotient);
+            Console.WriteLine("Remainder: " + remainder);
+
+        }
         public static void Main(string[] args)
         {
             Console.WriteLine("Enter a number for relative problem.\n");
@@ -117,6 +134,7 @@ namespace Basic_Core_Program
             Console.WriteLine("3 for Power of 2");
             Console.WriteLine("4 for Harmonic Number");
             Console.WriteLine("5 for Prime Factor");
+            Console.WriteLine("6 for Compute Quotient and Remainder");
             int Problem = Convert.ToInt32(Console.ReadLine());
             BasicCoreProgram basicCoreProgram = new BasicCoreProgram();
 
@@ -136,6 +154,9 @@ namespace Basic_Core_Program
                     break;
                 case 5:
                     basicCoreProgram.FactorPrime();
+                    break;
+                case 6:
+                    basicCoreProgram.QuoRem();
                     break;
                 default:
                     Console.WriteLine("You Enter Invalid Number ");
