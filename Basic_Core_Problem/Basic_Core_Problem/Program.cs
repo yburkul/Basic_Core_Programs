@@ -159,6 +159,22 @@ namespace Basic_Core_Program
                 Console.WriteLine("It is a Odd Number");
             }
         }
+
+        public void vowel()
+        {
+            Console.WriteLine("Enter a Letter");
+            char Letter = char.Parse(Console.ReadLine());
+
+            if (Letter == 'a' || Letter == 'e' || Letter == 'i' || Letter == 'o' || Letter == 'u')
+            {
+                Console.WriteLine("Entered letter is Vowel: " + Letter);
+
+            }
+            else
+            {
+                Console.WriteLine("Entered Letter is Consonant: " + Letter);
+            }
+        }
         public static void Main(string[] args)
         {
             Console.WriteLine("Enter a number for relative problem.\n");
@@ -170,6 +186,7 @@ namespace Basic_Core_Program
             Console.WriteLine("6 for Compute Quotient and Remainder");
             Console.WriteLine("7 for Swap Number");
             Console.WriteLine("8 for Check Number is Even or Odd");
+            Console.WriteLine("9 for Check Alphabet is Vowel or Consonant");
             int Problem = Convert.ToInt32(Console.ReadLine());
             BasicCoreProgram basicCoreProgram = new BasicCoreProgram();
 
@@ -198,6 +215,9 @@ namespace Basic_Core_Program
                     break;
                 case 8:
                     basicCoreProgram.EvenOdd();
+                    break;
+                case 9:
+                    basicCoreProgram.vowel();
                     break;
                 default:
                     Console.WriteLine("You Enter Invalid Number ");
