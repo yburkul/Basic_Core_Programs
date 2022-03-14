@@ -126,6 +126,24 @@ namespace Basic_Core_Program
             Console.WriteLine("Remainder: " + remainder);
 
         }
+
+        public void NumberSwap()
+        {
+            int a;
+            Console.WriteLine("Enter a First number: ");
+            a = int.Parse(Console.ReadLine());
+
+            int b;
+            Console.WriteLine("Enter a second Number: ");
+            b = int.Parse(Console.ReadLine());
+
+            a = a + b;
+            b = a - b;
+            a = a - b;
+
+            Console.WriteLine("After swap a: " + a);
+            Console.WriteLine("After swap b: " + b);
+        }
         public static void Main(string[] args)
         {
             Console.WriteLine("Enter a number for relative problem.\n");
@@ -135,6 +153,7 @@ namespace Basic_Core_Program
             Console.WriteLine("4 for Harmonic Number");
             Console.WriteLine("5 for Prime Factor");
             Console.WriteLine("6 for Compute Quotient and Remainder");
+            Console.WriteLine("7 for Swap Number");
             int Problem = Convert.ToInt32(Console.ReadLine());
             BasicCoreProgram basicCoreProgram = new BasicCoreProgram();
 
@@ -157,6 +176,9 @@ namespace Basic_Core_Program
                     break;
                 case 6:
                     basicCoreProgram.QuoRem();
+                    break;
+                case 7:
+                    basicCoreProgram.NumberSwap();
                     break;
                 default:
                     Console.WriteLine("You Enter Invalid Number ");
