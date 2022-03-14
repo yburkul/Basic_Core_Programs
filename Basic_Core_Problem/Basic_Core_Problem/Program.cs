@@ -144,6 +144,21 @@ namespace Basic_Core_Program
             Console.WriteLine("After swap a: " + a);
             Console.WriteLine("After swap b: " + b);
         }
+
+        public void EvenOdd()
+        {
+            int Number;
+            Console.WriteLine("Enter a Number");
+            Number = int.Parse(Console.ReadLine());
+            if (Number % 2 == 0)
+            {
+                Console.WriteLine("It is a Even Number");
+            }
+            else
+            {
+                Console.WriteLine("It is a Odd Number");
+            }
+        }
         public static void Main(string[] args)
         {
             Console.WriteLine("Enter a number for relative problem.\n");
@@ -154,6 +169,7 @@ namespace Basic_Core_Program
             Console.WriteLine("5 for Prime Factor");
             Console.WriteLine("6 for Compute Quotient and Remainder");
             Console.WriteLine("7 for Swap Number");
+            Console.WriteLine("8 for Check Number is Even or Odd");
             int Problem = Convert.ToInt32(Console.ReadLine());
             BasicCoreProgram basicCoreProgram = new BasicCoreProgram();
 
@@ -179,6 +195,9 @@ namespace Basic_Core_Program
                     break;
                 case 7:
                     basicCoreProgram.NumberSwap();
+                    break;
+                case 8:
+                    basicCoreProgram.EvenOdd();
                     break;
                 default:
                     Console.WriteLine("You Enter Invalid Number ");
