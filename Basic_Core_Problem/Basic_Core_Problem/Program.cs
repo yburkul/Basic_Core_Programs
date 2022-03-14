@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Basic_Core_Program
 {
-    class FlipCoinPercentage
+    class BasicCoreProgram
     {
         public void FlipCoin()
         {
@@ -44,21 +44,35 @@ namespace Basic_Core_Program
             Console.WriteLine("Percentage of Tail: " + Tail_Percent);
 
         }
-    }
-    class Program
-    {
+        public void YearLeap()
+        {
+            int Year;
+            Console.WriteLine("Enter a Year: ");
+            Year = int.Parse(Console.ReadLine());
+            if (Year % 4 == 0 && Year % 100 != 0 || Year % 400 == 0)
+            {
+                Console.WriteLine("It is a Leap Year");
+            }
+            else
+            {
+                Console.WriteLine("It is not a Leap Year");
+            }
+        }
         public static void Main(string[] args)
         {
             Console.WriteLine("Enter a number for relative problem.\n");
             Console.WriteLine("1 For Flip Coin Percentage");
-
+            Console.WriteLine("2 for Leap Year");
             int Problem = Convert.ToInt32(Console.ReadLine());
+            BasicCoreProgram basicCoreProgram = new BasicCoreProgram();
 
             switch (Problem)
             {
                 case 1:
-                    FlipCoinPercentage flipCoinPercentage = new FlipCoinPercentage();
-                    flipCoinPercentage.FlipCoin();
+                    basicCoreProgram.FlipCoin();
+                    break;
+                case 2:
+                    basicCoreProgram.YearLeap();
                     break;
                 default:
                     Console.WriteLine("You Enter Invalid Number ");
