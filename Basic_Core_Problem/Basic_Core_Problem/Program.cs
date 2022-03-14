@@ -175,6 +175,33 @@ namespace Basic_Core_Program
                 Console.WriteLine("Entered Letter is Consonant: " + Letter);
             }
         }
+
+        public void LargestNum()
+        {
+            Console.WriteLine("Enter a First Number");
+            int FirstNum = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter a Second Number");
+            int SecondNum = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter a Third Number");
+            int ThirdNum = int.Parse(Console.ReadLine());
+            if (FirstNum > SecondNum && FirstNum > ThirdNum)
+            {
+                Console.WriteLine("First Number is Greater than Second & Third Number");
+            }
+            else if (SecondNum > ThirdNum && SecondNum > FirstNum)
+            {
+                Console.WriteLine("Second Number is Greater than First & Third Number");
+
+            }
+            else
+            {
+                Console.WriteLine("Third Number is Greater Than First & Second Number");
+
+            }
+
+        }
         public static void Main(string[] args)
         {
             Console.WriteLine("Enter a number for relative problem.\n");
@@ -187,6 +214,7 @@ namespace Basic_Core_Program
             Console.WriteLine("7 for Swap Number");
             Console.WriteLine("8 for Check Number is Even or Odd");
             Console.WriteLine("9 for Check Alphabet is Vowel or Consonant");
+            Console.WriteLine("10 for Find the Largest Among Three number.\n");
             int Problem = Convert.ToInt32(Console.ReadLine());
             BasicCoreProgram basicCoreProgram = new BasicCoreProgram();
 
@@ -218,6 +246,9 @@ namespace Basic_Core_Program
                     break;
                 case 9:
                     basicCoreProgram.vowel();
+                    break;
+                case 10:
+                    basicCoreProgram.LargestNum();
                     break;
                 default:
                     Console.WriteLine("You Enter Invalid Number ");
