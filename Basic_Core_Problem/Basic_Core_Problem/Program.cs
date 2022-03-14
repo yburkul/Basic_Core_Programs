@@ -58,11 +58,29 @@ namespace Basic_Core_Program
                 Console.WriteLine("It is not a Leap Year");
             }
         }
+
+        public void PowerOf()
+        {
+            Console.WriteLine("Enter a Number ");
+            int number = int.Parse(Console.ReadLine());
+            if (number < 31)
+            {
+                int PowerOfTwo = (int)Math.Pow(2, number);
+                Console.WriteLine("2 to the Power of: " + number);
+                Console.WriteLine("=" + PowerOfTwo);
+            }
+            else
+            {
+                Console.WriteLine("Number must be less than 31");
+            }
+
+        }
         public static void Main(string[] args)
         {
             Console.WriteLine("Enter a number for relative problem.\n");
             Console.WriteLine("1 For Flip Coin Percentage");
             Console.WriteLine("2 for Leap Year");
+            Console.WriteLine("3 for Power of 2");
             int Problem = Convert.ToInt32(Console.ReadLine());
             BasicCoreProgram basicCoreProgram = new BasicCoreProgram();
 
@@ -73,6 +91,9 @@ namespace Basic_Core_Program
                     break;
                 case 2:
                     basicCoreProgram.YearLeap();
+                    break;
+                case 3:
+                    basicCoreProgram.PowerOf();
                     break;
                 default:
                     Console.WriteLine("You Enter Invalid Number ");
